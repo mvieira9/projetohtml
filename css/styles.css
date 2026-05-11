@@ -6,9 +6,16 @@ body {
     color: white;
 }
 body>:not(header) {
-    font-family: 'Google sans';
+    margin: 0 auto;
+    font-family: 'Google Sans';
+    justify-content: center;
+    width: 50%;
 }
 
+header{
+    margin-left: 30vh;
+}
 header h1 {
     font-family: 'Playfair Display';
+    font-size: 400%
 }
