@@ -4,22 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Ciências da Computação</title>
+    <title>Ciência da Computação</title>
 </head>
-<body>
-    <header>
-        <h1>✦ Ciências da Computação</h1>
-        <a href="/curso">O curso</a>
-        <a href="/quem-somos">Quem somos</a>
-    </header>
-    <img src="/img/programacao.jpg" class="center overlay">
-    <p>Vivemos num mundo onde cada clique, cada mensagem, cada decisão automatizada é movida por algo invisível — o código. A Ciência da Computação não é apenas uma área do conhecimento: é a linguagem secreta do século XXI, o alicerce sobre o qual a civilização moderna foi construída, tijolo por tijolo, bit por bit.</p>
-    <p>Pense no último aplicativo que você usou hoje de manhã. No algoritmo que recomendou a música que passou no fundo enquanto você tomava café. No sistema hospitalar que registrou o prontuário de alguém que você ama. Na rede elétrica inteligente que distribui energia enquanto você dorme. Tudo isso existe porque alguém, em algum momento, decidiu entender como as máquinas pensam — e aprendeu a conversar com elas.</p>
-    <p>A Ciência da Computação é o estudo da resolução de problemas em sua forma mais pura. Ela te ensina a olhar para um desafio complexo e desmontá-lo em partes menores, lógicas e elegantes. É matemática com alma criativa. É engenharia com liberdade artística. É a única disciplina que te permite construir algo do nada — literalmente do zero e do um — e colocar isso nas mãos de milhões de pessoas em questão de segundos.</p>
-    <p>Aqui você vai mergulhar fundo. Vamos explorar estruturas de dados e algoritmos, os blocos fundamentais de qualquer sistema eficiente. Vamos desvendar como funciona a inteligência artificial que está redefinindo o mercado de trabalho, a medicina, a arte e o direito. Vamos entrar na arquitetura de redes que conecta continentes, nos sistemas operacionais que orquestram bilhões de dispositivos, na criptografia que protege segredos e transações ao redor do planeta.</p>
-    <p>Mas não para por aí. A computação moderna está na fronteira de tudo que é novo: computação quântica, que promete resolver em minutos o que levaria anos para os computadores atuais; aprendizado de máquina, que faz sistemas aprenderem com a experiência sem serem explicitamente programados; computação em nuvem, que transformou infraestrutura física em recurso elástico e acessível; e muito mais.</p>
-    <p>Seja você alguém que está começando do zero, um profissional que quer se atualizar, ou um entusiasta que sempre quis entender como tudo isso funciona por baixo dos panos — este é o seu lugar. Aqui o conhecimento é apresentado com clareza, sem jargão desnecessário, sem barreiras artificiais. Acreditamos que qualquer pessoa curiosa é capaz de compreender os conceitos que movem o mundo digital.</p>
-    <p>Porque no fim das contas, a maior revolução da Ciência da Computação não foi técnica. Foi humana. Ela democratizou o poder de criar, de comunicar e de transformar. E agora, essa revolução está ao seu alcance.</p>
-    <p>Explore. Questione. Aprenda. O futuro não está apenas esperando para ser descoberto — ele está esperando para ser <strong>programado por você</strong>.</p>    </div>
+<script>
+        const nomeImagemCC = [
+        {text: "é programação.", image:"img/programacao.jpg"}, 
+        {text: "é matemática.", image:"img/matematica.jpg"},
+        {text: "é design.", image: "img/design.jpg"},
+        {text: "é sistemas operacionais.", image: "img/sistemaoperacional.jpg"},
+        {text: "é Internet das Coisas.", image: "img/iot.jpg"},
+        {text: "é inteligência artificial.", image: "img/ia.jpg"},
+        {text: "é banco de dados.", image: "img/bancodedados.jpg"}
+    ];
+
+        let i = 0;
+
+    setInterval (() => {
+        i = (i + 1) % nomeImagemCC.length;
+        document.getElementById("cc-texto-variavel").innerText = nomeImagemCC[i].text;
+         document.getElementById("cc-imagem-variavel").src = nomeImagemCC[i].image;
+        }, 1500)
+    </script>
+<body> 
+    <div class="container-landing">
+    <div class="text-landing">
+        <h1>Ciência da Computação</h1>
+        <p id="cc-texto-variavel">é banco de dados.</p>
+        <nav>
+        <a href="curso.html">conheça mais.</a>
+        </nav>
+    </div>
+    <img id="cc-imagem-variavel" src="img/bancodedados.jpg" class="landing-page-image">
+    </div>
+    <footer class="footer-landing">
+    <p>© 2026 Turma de Ciência da Computação — Instituto Federal de Santa Catarina, Campus Lages.</p>
+    </footer>   
 </body>
 </html>
